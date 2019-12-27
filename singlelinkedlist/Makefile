@@ -4,7 +4,7 @@ CC:=gcc
 LIB= singlelinkedlist.so
 CFLAG+=-I../include
 LDCFLAG+=-fPIC
-LIB_DIR:=../LIB
+LIB_DIR:=../lib
 
 all:$(LIB) install
 
