@@ -38,6 +38,7 @@ int detect_linklist(LinkList_t * L)
 		return E_ERROR;
 	}
 	free(*L);
+	*L = NULL;
 	return E_OK;
 }
 
@@ -124,14 +125,13 @@ int insert_to_tail(LinkList_t L, void *data)
 Node_t* find_from_index(LinkList_t L, int index)
 {
 	Node_t* p;
-	int i;
+	int i = 0;
 	
-	if (0 >= i || NULL == L)
+	if (0 >= index || NULL == L)
 	{
 		return NULL;
 	}
 	
-	i = 0;
 	p = L;
 	while (NULL != p->NextNode && i < index)
 	{
